@@ -16,3 +16,14 @@
     align-items: center;
     flex: 1;
 }
+
+.resume {
+    box-shadow: 0 0 1em hsl(0, 0%, 12%);
+    border-radius: 1em;
+    width: 50vw;
+    flex: 1;
+}
+
+:root[data-theme="light"] .resume {
+    box-shadow: 0 0 0.5em hsl(0, 0%, 50%);
+}

@@ -11,7 +11,7 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
 
 document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('preload');
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
 
     window.requestAnimationFrame(() => {

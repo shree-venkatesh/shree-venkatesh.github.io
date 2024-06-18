@@ -33,19 +33,28 @@ body.theme-applied {
   visibility: visible;
 }
 
+p span {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  display: inline;
+  font-size: inherit;
+  color: inherit;
+}
 
 :root {
   --navbar-text-color: hsl(171, 27%, 72%);
-  --heading-text-color: hsl(199, 68%, 88%);
+  --heading-text-color: hsl(199, 67%, 88%);
   --subtext-color: hsl(171, 47%, 69%);
   --main-background: hsl(200, 23%, 18%);
-  --about-background: hsl(20, 23%, 18%);
-  --projects-background: hsl(60, 23%, 18%);
-  --contact-background: hsl(120, 23%, 18%);
   --overlay-background: hsl(204, 19%, 26%);
   --highlight-color: hsl(199, 52%, 88%);
-  --light-highlight-color: hsl(199, 52%, 88%);
   --contrast-overlay-background: hsl(204, 19%, 74%);
+  --contrast-highlight-color: hsl(199, 52%, 12%);
+  --contrast-subtext-color: hsl(171, 47%, 21%);
+  --contrast-navbar-text-color: hsl(171, 27%, 28%);
+  --TESC-blue: hsl(210, 100%, 72%);
+  --TUAS-amber: hsl(45, 100%, 50%);
 }
 
 :root[data-theme="light"] {
@@ -53,12 +62,14 @@ body.theme-applied {
   --heading-text-color: hsl(199, 68%, 12%);
   --subtext-color: hsl(171, 47%, 21%);
   --main-background: hsl(200, 23%, 82%);
-  --about-background: hsl(20, 23%, 82%);
-  --projects-background: hsl(60, 23%, 82%);
-  --contact-background: hsl(120, 23%, 82%);
   --overlay-background: hsl(204, 19%, 74%);
   --highlight-color: hsl(199, 52%, 12%);
   --contrast-overlay-background: hsl(204, 19%, 26%);
+  --contrast-highlight-color: hsl(199, 67%, 88%);
+  --contrast-subtext-color: hsl(171, 47%, 69%);
+  --contrast-navbar-text-color: hsl(171, 27%, 72%);
+  --TESC-blue: hsl(200, 100%, 23%);
+  --TUAS-amber: hsl(45, 100%, 30%);
 }
 
 .header {
@@ -75,7 +86,7 @@ body.theme-applied {
   align-items: center;
   justify-self: start;
   background-color: var(--overlay-background);
-  border-radius: 100em;
+  border-radius: 1em;
   box-shadow: 0 0 1em hsl(0, 0%, 12%);
   padding: 0.1em;
   margin-left: auto;
@@ -102,15 +113,16 @@ body.theme-applied {
   margin-top: 0%;
   font-size: 1em;
   font-weight: bold;
-  color: var(--highlight-color);
+  color: var(--contrast-navbar-text-color);
+  background-color: var(--contrast-overlay-background);
   text-decoration: none;
-  text-shadow: 0 0 1em hsl(120, 0%, 10%);
   padding: 0.5em 1em;
-  border-radius: 100em;
+  border-radius: 1em;
+  box-shadow: 0 0 1em hsl(0, 0%, 12%);
 }
 
 :root[data-theme="light"] .navbar-element:hover {
-  text-shadow: 0 0 0em hsl(120, 0%, 10%);
+  box-shadow: 0 0 0.5em hsl(0, 0%, 50%);
 }
 
 #theme-toggle{
@@ -149,19 +161,33 @@ body.theme-applied {
 }
 
 .footer-element:hover {
-  text-shadow: 0 0 1em hsl(120, 0%, 10%);
-  background-color: var(--light-highlight-color);
+  background-color: var(--contrast-overlay-background);
+  box-shadow: 0 0 1em hsl(0, 0%, 12%);
 }
 
 :root[data-theme="light"] .footer-element:hover {
-  color: var(--highlight-color);
-  text-shadow: 0 0 0em hsl(120, 0%, 10%);
   box-shadow: 0 0 0.5em hsl(0, 0%, 50%);
 }
 
 .svg {
   height: 2.5em;
   width: 2.5em;
+}
+
+:root[data-theme="dark"] .svg {
+  filter: brightness(0) saturate(100%) invert(91%) sepia(12%) saturate(814%) hue-rotate(172deg) brightness(101%) contrast(92%);
+}
+
+:root[data-theme="light"] .svg {
+  filter: invert(0%);
+}
+
+:root[data-theme="light"] .footer-element:hover .svg {
+  filter: brightness(0) saturate(100%) invert(91%) sepia(12%) saturate(814%) hue-rotate(172deg) brightness(101%) contrast(92%);
+}
+
+:root[data-theme="dark"] .footer-element:hover .svg {
+  filter: invert(0%);
 }
 
 .toggle-svg {
