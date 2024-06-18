@@ -9,8 +9,14 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
     }
   });
 
-  // Apply the theme from local storage on initial load
-  window.addEventListener('load', function() {
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('preload');
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
-  });
+
+    window.requestAnimationFrame(() => {
+        document.body.classList.add('theme-applied');
+        document.body.classList.remove('preload');
+        document.body.classList.add('loaded');
+    });
+});
