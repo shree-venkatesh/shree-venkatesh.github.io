@@ -16,3 +16,110 @@
     align-items: center;
     flex: 1;
 }
+
+.slider-wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    margin-bottom: -1.5em;
+}
+
+.project-page-container {
+    background-color: var(--overlay-background);
+    border-radius: 30px;
+    padding: 20px;
+    margin: 0 1.5em;
+    flex: 1 0 100%;
+    box-shadow: 0 0 1.5em hsl(0, 0%, 10%);
+    z-index: 1;
+    scroll-snap-align: center;
+    transition: scroll 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-page-metacontainer {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    padding: 1.5em;
+}
+
+button {
+    display: none;
+}
+
+.arrow {
+    width: 75px;
+    height: 75px;
+    border-radius: 100em;
+    background-color: var(--overlay-background);
+    box-shadow: 0 0 1.5em hsl(0, 0%, 10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 1em;
+}
+
+.disable {
+    background-color: var(--main-background); 
+    box-shadow: 0 0 0em hsl(0, 0%, 10%);
+    color: var(--main-background);
+}
+
+:root[data-theme="light"] .arrow {
+    box-shadow: 0 0 1em hsl(0, 0%, 50%);
+}
+
+:root[data-theme="light"] .disable {
+    box-shadow: 0 0 0em hsl(0, 0%, 50%);
+}
+
+:root[data-theme="light"] .project-page-container {
+    box-shadow: 0 0 1em hsl(0, 0%, 50%);
+}
+
+.project-category {
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    flex-grow: 0;
+    color: var(--heading-text-color);
+    box-shadow: 0 0 1.5em hsl(0, 0%, 10%);
+    background-color: var(--overlay-background);
+}
+
+:root[data-theme="light"] .project-category {
+    box-shadow: 0 0 0.5em hsl(0, 0%, 50%);
+}
+
+.project-title{
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 0.5em;
+    margin: 20px;
+    flex-grow: 0;
+    color: var(--heading-text-color);
+}
+
+.project-text {
+    font-size: smaller;
+    color: var(--heading-text-color);
+    margin: 20px;
+}
+
+.highlight {
+    color: var(--subtext-color);
+}
+
+.image {
+    width: 70%;
+    height: auto;
+}

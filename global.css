@@ -23,6 +23,11 @@ body {
   color: var(--heading-text-color);
 }
 
+::selection {
+  background-color: var(--contrast-overlay-background);
+  color: var(--contrast-highlight-color)
+}
+
 /* Initially hide the body */
 body {
   visibility: hidden;

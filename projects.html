@@ -24,6 +24,42 @@
             </label>
         </div>
         <div class="body">
+            <h2 class="project-category">Triton UAS Projects</h2>
+            <div class="slider-wrapper">
+                <button id="prevBtn">Previous</button>
+                <label for="prevBtn">
+                    <p class="arrow" id="left"><-</p>
+                </label>
+                <div class="project-page-metacontainer">
+                    <div class="project-page-container" id="0">
+                        <h2 class="project-title">Houston : Ground Control Station Frontend</h2>
+                        <p class="project-text">
+                            The frontend of our ground control station, <span class="highlight">Houston</span>, is a React web app for monitoring and adjusting plane parameters during flight. 
+                            It tracks connectivity, telemetry (altitude, battery voltages, airspeed), and image data, allows in-flight camera adjustments, and facilitates mission parameter input and waypoint uploads.
+                            I designed and developed the UI for the Controls Page and the Report Page.
+                        </p>
+                        <img src="assets/houston.png" class="image">
+                    </div>
+                    <div class="project-page-container" id="1">
+                        <h2 class="project-title">Guided Payload</h2>
+                        <p class="project-text">
+                            The guided payload is crucial to our macro UAV project. 
+                            It features an <span class="highlight">autonomous</span> self-guided TPU housing with a small water bottle inside, released mid-air from under the UAV's wings. 
+                        </p>
+                        <p class="project-text">
+                            It is powered by a 2S Li-Po battery, an <span class="highlight">ESP32</span> microcontroller, a BN880 GPS/Compass module, 2 servos, and a <span class="highlight">Proportional Control Algorithm</span>. 
+                            The housing is attached to the parachute with strings, and steering strings connect to a custom 3D-printed servo arm on either side. 
+                        </p>
+                        <p class="project-text">
+                            The servo pulls on the strings to steer the parachute, ensuring the payload is safely and accurately dropped onto the target.
+                        </p>
+                    </div>
+                </div>
+                <button id="nextBtn">Next</button>
+                <label for="nextBtn">
+                    <p class="arrow" id="right">-></p>
+                </label>
+            </div>
         </div>
         <div class="footer">
             <a href="https://www.linkedin.com/in/shree-venkatesh/" target="_blank" class="footer-element">
@@ -43,4 +79,5 @@
     </div>
 </body>
 <script src="global.js"></script>
+<script src="js/projects.js"></script>
 </html>
