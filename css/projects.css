@@ -15,6 +15,7 @@
     justify-content: center;
     align-items: center;
     flex: 1;
+    user-select: text;
 }
 
 .slider-wrapper {
@@ -56,6 +57,7 @@ button {
 }
 
 .arrow {
+    user-select: none;
     width: 75px;
     height: 75px;
     border-radius: 100em;
