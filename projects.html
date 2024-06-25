@@ -24,24 +24,37 @@
             </label>
         </div>
         <div class="body">
-            <h2 class="project-category">Triton UAS Projects</h2>
+            <span class="project-category-switcher">
+                <button id="tuas-button"></button>
+                <label for="tuas-button">
+                    <h2 class="project-category selected" id="tuas-h2">Triton UAS</h2>
+                </label>
+                <button id="personal-button"></button>
+                <label for="personal-button">
+                    <h2 class="project-category" id="personal-h2">Personal</h2>
+                </label>
+                <button id="academic-button"></button>
+                <label for="academic-button">
+                    <h2 class="project-category" id="academic-h2">Academic</h2>
+                </label>
+            </span>
             <div class="slider-wrapper">
-                <button id="prevBtn">Previous</button>
+                <button id="prevBtn"></button>
                 <label for="prevBtn">
                     <p class="arrow" id="left"><-</p>
                 </label>
-                <div class="project-page-metacontainer">
-                    <div class="project-page-container" id="0">
-                        <h2 class="project-title">Houston : Ground Control Station Frontend</h2>
+                <div class="project-page-metacontainer active"  id="tuas">
+                    <div class="project-page-container" id="tuas-0">
+                        <h3 class="project-title"><a class="highlight" href="https://github.com/tritonuas/gcs" target="_blank">Houston</a> : Ground Control Station Frontend</h2>
                         <p class="project-text">
-                            The frontend of our ground control station, <a class="highlight" href="https://github.com/tritonuas/gcs">Houston</a>, is a React web app for monitoring and adjusting plane parameters during flight. 
+                            The frontend of our ground control station, <span class="highlight">Houston</span>, is a React web app for monitoring and adjusting plane parameters during flight. 
                             It tracks connectivity, telemetry (altitude, battery voltages, airspeed), and image data, allows in-flight camera adjustments, and facilitates mission parameter input and waypoint uploads.
-                            I designed and developed the UI for the Controls Page and the Report Page.
+                            I designed and developed the UI for the Controls Page and the Report Page, and integrated the backend for the Report Page.
                         </p>
                         <img src="assets/houston.png" class="image">
                     </div>
-                    <div class="project-page-container" id="1">
-                        <h2 class="project-title">Guided Payload</h2>
+                    <div class="project-page-container" id="tuas-1">
+                        <h3 class="project-title">Guided Payload</h2>
                         <p class="project-text">
                             The guided payload is crucial to our macro UAV project. 
                             It features an <span class="highlight">autonomous</span> self-guided TPU housing with a small water bottle inside, released mid-air from under the UAV's wings. 
@@ -55,7 +68,58 @@
                         </p>
                     </div>
                 </div>
-                <button id="nextBtn">Next</button>
+                <div class="project-page-metacontainer"  id="personal">
+                    <div class="project-page-container" id="personal-0">
+                        <h3 class="project-title">Stock Predictor</h2>
+                        <p class="project-text">
+                            I recently developed a Convolutional Neural Network (CNN) using <span class="highlight">Python</span> and <span class="highlight">Tensorflow</span> to predict the short-term behavior of stocks with a remarkable <span class="highlight">71%</span> accuracy.   
+                        </p>
+                        <p class="project-text">
+                            This project involved implementing sophisticated data preprocessing techniques to clean and normalize stock market data, ensuring the model's performance was both optimal and generalized. 
+                            By utilizing convolutional layers, the CNN could automatically learn and extract relevant features from historical stock price data, significantly enhancing its predictive capabilities. 
+                            To further boost accuracy, I optimized the model's hyperparameters using <span class="highlight">Keras Hyperband Tuner</span>, which fine-tuned the network efficiently. 
+                        </p>
+                        <p class="project-text">
+                            The trained CNN model was then integrated into a trading system for automated decision-making. 
+                            Extensive backtesting was conducted to evaluate its effectiveness, demonstrating promising results and potential for real-world application in automated trading strategies.
+                        </p>
+                    </div>
+                    <div class="project-page-container" id="personal-1">
+                        <h3 class="project-title">Snake AI</h2>
+                        <p class="project-text">
+                            I developed a reinforcement learning model using <span class="highlight">PyTorch</span> that demonstrates iterative improvement in the classic Snake game. 
+                            This project uses reinforcement learning to enable the model to learn from its environment and improve its performance over time. 
+                            I set the agent to be the snake, the positive reward to be the food, the negative reward to be hitting itself, and the environment to be the playable space.   
+                        </p>
+                        <p class="project-text">
+                            The model's ability to learn and adapt led to increasingly efficient gameplay, showcasing the potential of reinforcement learning in developing intelligent and adaptive systems. 
+                            This project not only highlighted the versatility of PyTorch but also illustrated the practical applications of reinforcement learning in gaming and beyond. 
+                        </p>
+                    </div>
+                    <div class="project-page-container" id="personal-2">
+                        <h3 class="project-title"><a class="highlight" href="https://github.com/shree-venkatesh/shree-venkatesh.github.io" target="_blank">Personal Portfolio Website</a></h2>
+                        <p class="project-text">
+                            I developed this website to showcase my skills and projects as a developer. 
+                            Built using <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, and <span class="highlight">JavaScript</span>, the site features interactive elements and highlights my UI design style, which is also reflected in my other projects, like <a class="highlight" href="https://github.com/tritonuas/gcs" target="_blank">Houston</a>.
+                            Each project includes detailed descriptions, technologies used, and links to public GitHub repositories when available, offering visitors a comprehensive view of my work.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-page-metacontainer"  id="academic">
+                    <div class="project-page-container" id="academic-0">
+                        <h3 class="project-title">CSE 151A: <a class="highlight" href="https://github.com/Char1iee/NBA_Odds_Analysis" target="_blank">NBA Odds Analysis</a></h2>
+                        <p class="project-text">
+                            UCSD's CSE 151A is a Introduction to Machine Learning course, that teaches the fundamentals and priciples behind some commonly used machine learning algorithms.
+                            Our project in NBA sports analysis focuses on predicting key metrics such as money lines, totals, spreads, second-half totals, and scores using advanced machine learning techniques. 
+                        </p>
+                        <p class="project-text">
+                            By leveraging NN, RNN, and CNN models trained on detailed NBA dataset, we aim to decipher public sentiment towards team strengths. 
+                            These predictive models offer insights into which teams are favored in upcoming games and to what extent, shedding light on how public perceptions influence betting odds. 
+                            This study provides a deep dive into sports analytics, revealing the intricate relationship between public sentiment and predictive modeling in NBA games.
+                        </p>
+                    </div>
+                </div>
+                <button id="nextBtn"></button>
                 <label for="nextBtn">
                     <p class="arrow" id="right">-></p>
                 </label>

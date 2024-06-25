@@ -58,6 +58,7 @@ p span {
   --contrast-highlight-color: hsl(199, 52%, 12%);
   --contrast-subtext-color: hsl(171, 47%, 21%);
   --contrast-navbar-text-color: hsl(171, 27%, 28%);
+  --contrast-heading-text-color: hsl(199, 68%, 12%);
   --TESC-blue: hsl(210, 100%, 72%);
   --TUAS-amber: hsl(45, 100%, 50%);
 }
@@ -73,6 +74,7 @@ p span {
   --contrast-highlight-color: hsl(199, 67%, 88%);
   --contrast-subtext-color: hsl(171, 47%, 69%);
   --contrast-navbar-text-color: hsl(171, 27%, 72%);
+  --contrast-heading-text-color: hsl(199, 67%, 88%);
   --TESC-blue: hsl(200, 100%, 23%);
   --TUAS-amber: hsl(45, 100%, 30%);
 }
@@ -110,19 +112,12 @@ p span {
   color: var(--navbar-text-color);
   text-decoration: none;
   padding: 0.5em 1em;
-  border-radius: 100em;
+  border-radius: 1em;
 }
 
 .navbar-element:hover {
-  margin: 0 1em;
-  margin-top: 0%;
-  font-size: 1em;
-  font-weight: bold;
   color: var(--contrast-navbar-text-color);
   background-color: var(--contrast-overlay-background);
-  text-decoration: none;
-  padding: 0.5em 1em;
-  border-radius: 1em;
   box-shadow: 0 0 1em hsl(0, 0%, 12%);
 }
 

@@ -1,3 +1,7 @@
+button {
+    display: none;
+}
+
 .projects-page {
     min-height: 100vh;
     min-width: 100vh;
@@ -18,15 +22,66 @@
     user-select: text;
 }
 
-.slider-wrapper {
-    position: relative;
-    margin: 0 auto;
-    width: 65%;
+.project-category-switcher {
     display: flex;
     flex-direction: row;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 1em;
+}
 
+.project-category {
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin: 0 1em;
+    text-align: center;
+    color: var(--heading-text-color);
+    background-color: var(--overlay-background);
+    filter: brightness(50%);
+}
+
+.project-category:hover {
+    box-shadow: 0 0 1.5em hsl(0, 0%, 10%);
+    filter: brightness(100%);
+}
+
+.selected {
+    box-shadow: 0 0 1.5em hsl(0, 0%, 10%);
+    filter: brightness(100%);
+}
+:root[data-theme="light"] .project-category:hover {
+    box-shadow: 0 0 0.5em hsl(0, 0%, 50%);
+    filter: brightness(100%);
+}
+
+:root[data-theme="light"] .selected {
+    box-shadow: 0 0 0.5em hsl(0, 0%, 50%);
+    filter: brightness(100%);
+}
+
+.slider-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    flex: 1;
     align-items: center;
-    margin-bottom: -1.5em;
+    justify-content: center;
+    margin-bottom: -1em;
+}
+
+.project-page-metacontainer {
+    display: none;
+    overflow-x: hidden;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+    padding: 1.5em;
+    flex: 1;
+    min-height: 100%;
+}
+
+.active {
+    display: flex;
+    min-height: 72vh;
 }
 
 .project-page-container {
@@ -43,13 +98,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.project-page-metacontainer {
-    display: flex;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
-    padding: 1.5em;
+    min-height: 100%;
 }
 
 button {
@@ -87,23 +136,8 @@ button {
     box-shadow: 0 0 1em hsl(0, 0%, 50%);
 }
 
-.project-category {
-    font-size: 1.5em;
-    font-weight: bold;
-    border-radius: 0.5em;
-    padding: 0.5em;
-    flex-grow: 0;
-    color: var(--heading-text-color);
-    box-shadow: 0 0 1.5em hsl(0, 0%, 10%);
-    background-color: var(--overlay-background);
-}
-
-:root[data-theme="light"] .project-category {
-    box-shadow: 0 0 0.5em hsl(0, 0%, 50%);
-}
-
 .project-title{
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: bold;
     border-radius: 0.5em;
     margin: 20px;
