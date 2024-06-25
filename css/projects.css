@@ -38,6 +38,7 @@ button {
     color: var(--heading-text-color);
     background-color: var(--overlay-background);
     filter: brightness(50%);
+    user-select: none;
 }
 
 .project-category:hover {
