@@ -13,16 +13,19 @@ const right = document.getElementById('right');
 const tuasBtn = document.getElementById('tuas-button');
 const personalBtn = document.getElementById('personal-button');
 const academicBtn = document.getElementById('academic-button');
+const otherBtn = document.getElementById('other-button');
 
 // project category selector button labels
 const tuasH2 = document.getElementById('tuas-h2');
 const personalH2 = document.getElementById('personal-h2');
 const academicH2 = document.getElementById('academic-h2');
+const otherH2 = document.getElementById('other-h2');
 
 // project gallery metacontainers
 const tuas = document.getElementById('tuas');
 const personal = document.getElementById('personal');
 const academic = document.getElementById('academic');
+const other = document.getElementById('other');
 
 // initialize which slide to show on initial render
 let currentSlide = 0;
@@ -87,6 +90,8 @@ tuasBtn.addEventListener('click', () => {
     personalH2.classList.remove('selected');
     academic.classList.remove('active');
     academicH2.classList.remove('selected');
+    other.classList.remove('active');
+    otherH2.classList.remove('selected');
     slides = document.querySelectorAll('.active .project-page-container');
     currentCategory = "tuas";
     currentSlide = 0;
@@ -101,6 +106,8 @@ personalBtn.addEventListener('click', () => {
     tuasH2.classList.remove('selected');
     academic.classList.remove('active');
     academicH2.classList.remove('selected');
+    other.classList.remove('active');
+    otherH2.classList.remove('selected');
     slides = document.querySelectorAll('.active .project-page-container');
     currentCategory = "personal";
     currentSlide = 0;
@@ -115,6 +122,8 @@ academicBtn.addEventListener('click', () => {
     personalH2.classList.remove('selected');
     tuas.classList.remove('active');
     tuasH2.classList.remove('selected');
+    other.classList.remove('active');
+    otherH2.classList.remove('selected');
     slides = document.querySelectorAll('.active .project-page-container');
     currentCategory = "academic";
     currentSlide = 0;
@@ -122,5 +131,20 @@ academicBtn.addEventListener('click', () => {
     updateButtons();
 });
 
+otherBtn.addEventListener('click', () => {
+    other.classList.add('active');
+    otherH2.classList.add('selected');
+    personal.classList.remove('active');
+    personalH2.classList.remove('selected');
+    tuas.classList.remove('active');
+    tuasH2.classList.remove('selected');
+    academic.classList.remove('active');
+    academicH2.classList.remove('selected');
+    slides = document.querySelectorAll('.active .project-page-container');
+    currentCategory = "academic";
+    currentSlide = 0;
+    initialScrollToSlide(currentSlide)
+    updateButtons();
+});
 // Initial button state
 updateButtons();

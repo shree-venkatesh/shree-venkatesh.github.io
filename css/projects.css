@@ -31,6 +31,7 @@ button {
 }
 
 .project-category {
+    min-width:8dvw;
     border-radius: 0.5em;
     padding: 0.5em;
     margin: 0 1em;

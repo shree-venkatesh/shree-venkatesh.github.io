@@ -61,6 +61,7 @@ p span {
   --contrast-heading-text-color: hsl(199, 68%, 12%);
   --TESC-blue: hsl(210, 100%, 72%);
   --TUAS-amber: hsl(45, 100%, 50%);
+  --CSES-yellow: rgb(243, 201, 105);
 }
 
 :root[data-theme="light"] {
