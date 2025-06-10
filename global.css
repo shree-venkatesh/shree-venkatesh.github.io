@@ -61,7 +61,7 @@ p span {
   --contrast-heading-text-color: hsl(199, 68%, 12%);
   --TESC-blue: hsl(210, 100%, 72%);
   --TUAS-amber: hsl(45, 100%, 50%);
-  --CSES-yellow: rgb(243, 201, 105);
+  --CSES-yellow: hsl(42, 85%, 68%);
 }
 
 :root[data-theme="light"] {
@@ -78,6 +78,7 @@ p span {
   --contrast-heading-text-color: hsl(199, 67%, 88%);
   --TESC-blue: hsl(200, 100%, 23%);
   --TUAS-amber: hsl(45, 100%, 30%);
+  --CSES-yellow: hsl(42, 85%, 34%);
 }
 
 .header {
@@ -298,6 +299,17 @@ body.preload .toggle-label:before {
   display: flex;
   align-items: center;
   gap: 0.5em;
+}
+
+.update {
+  color: var(--subtext-color);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 1em;
+  font-size: 0.7em;
+  opacity: 0.5;
+  font-style: italic;
 }
 
 /* Add these mobile-responsive styles to your existing global.css */
