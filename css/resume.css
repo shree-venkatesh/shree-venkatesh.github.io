@@ -27,3 +27,23 @@
 :root[data-theme="light"] .resume {
     box-shadow: 0 0 0.5em hsl(0, 0%, 50%);
 }
+
+@media screen and (max-width: 768px) {
+    .resume-page {
+        min-width: 100vw;
+        padding: 1em;
+    }
+
+    .resume {
+        width: 90vw;
+        border-radius: 0.75em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .resume {
+        width: 95vw;
+        border-radius: 0.5em;
+        box-shadow: 0 0 0.75em hsl(0, 0%, 20%);
+    }
+}

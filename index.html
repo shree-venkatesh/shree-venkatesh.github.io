@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
 <head>
     <title>Shree Venkatesh</title>
@@ -8,6 +9,11 @@
 <body>
     <div class="homepage">
         <div class="header">
+            <button class="hamburger" id="hamburger-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="navbar">
                 <a href="./index.html" class="navbar-element" id="home">Home</a>
                 <p style="font-size: 1.5em; font-weight: lighter;">|</p>
@@ -17,11 +23,13 @@
                 <p style="font-size: 1.5em; font-weight: lighter;">|</p>
                 <a href="./resume.html" class="navbar-element" id="resume">Resume</a>
             </div>
-            <button id="theme-toggle"></button>
-            <label for="theme-toggle" class="toggle-label">
-                <img src="assets/sun.svg" id="sun" class="toggle-svg">
-                <img src="assets/moon.svg" id="moon" class="toggle-svg">
-            </label>
+            <div class="theme-toggle-container">
+                <button id="theme-toggle"></button>
+                <label for="theme-toggle" class="toggle-label">
+                    <img src="assets/sun.svg" id="sun" class="toggle-svg">
+                    <img src="assets/moon.svg" id="moon" class="toggle-svg">
+                </label>
+            </div>
         </div>
         <div class="body">
             <div class="homepage-name-subtext-container">

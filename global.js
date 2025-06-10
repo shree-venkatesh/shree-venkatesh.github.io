@@ -20,3 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('loaded');
     });
 });
+
+document.getElementById('hamburger-toggle').addEventListener('click', () => {
+  document.querySelector('.navbar').classList.toggle('show');
+});

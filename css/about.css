@@ -63,3 +63,55 @@
 #CSES {
     color: var(--CSES-yellow);
 }
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .about-page {
+        min-width: 100vw;
+        padding: 5px;
+    }
+    
+    .about-page-container {
+        
+        padding: 15px;
+        border-radius: 1.5em;
+        margin: 10px 0;
+    }
+    
+    .about-title {
+        font-size: 1.3em;
+        margin: 15px 10px;
+    }
+    
+    .about-text {
+        margin: 15px 10px;
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    .about-page-container {
+        width: 90vw;
+        padding: 12px;
+        border-radius: 1em;
+    }
+    
+    .about-title {
+        font-size: 1.5em;
+        margin: 12px 8px;
+    }
+    
+    .about-text {
+        margin: 12px 8px;
+        font-size: 1.0em;
+        line-height: 1.4;
+    }
+}
+
+/* Large Mobile/Small Tablet */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .about-page-container {
+        width: 70%;
+    }
+}

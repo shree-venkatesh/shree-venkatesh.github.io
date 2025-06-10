@@ -41,6 +41,8 @@
     border-radius: 2em;
     padding: 2em;
     box-shadow: 0 0 2em hsl(0, 0%, 10%);
+    justify-content: center;
+    align-content: center;
 }
 
 :root[data-theme="light"] .homepage-name-subtext-container {
@@ -62,4 +64,95 @@
     0% { opacity: 1; }
     50% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+/* Add these mobile-responsive styles to your existing css/home.css */
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .homepage {
+        min-width: 100vw;
+        padding: 5px;
+    }
+    
+    .homepage-name-subtext-container {
+        width: 90%;
+        max-width: 500px;
+        padding: 1.5em;
+        border-radius: 1.5em;
+        margin: 10px;
+    }
+    
+    .homepage-name {
+        font-size: 2.2em;
+        margin: 0.2em;
+        text-align: center;
+        line-height: 1.1;
+    }
+    
+    .homepage-name-subtext {
+        margin: 0.2em;
+        font-size: 0.9em;
+    }
+    
+    .cursor {
+        font-size: x-large;
+        margin-left: 1px;
+    }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    .homepage-name-subtext-container {
+        width: 90vw;
+        padding: 1.2em;
+        border-radius: 1em;
+        min-height: 18vh;
+    }
+
+    .homepage-name {
+        font-size: 2.4em;
+        word-break: break-word;
+    }
+    
+    .homepage-name-subtext {
+        font-size: 1.0em;
+    }
+    
+    .cursor {
+        font-size: large;
+    }
+}
+
+/* Very Small Mobile Styles */
+@media screen and (max-width: 360px) {
+    .homepage-name-subtext-container {
+        width: 98%;
+        padding: 1em;
+    }
+    
+    .homepage-name {
+        font-size: 1.5em;
+        word-break: break-word;
+    }
+    
+    .homepage-name-subtext {
+        font-size: 0.8em;
+    }
+    
+    .cursor {
+        font-size: medium;
+    }
+}
+
+/* Large Mobile/Small Tablet */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .homepage-name-subtext-container {
+        width: 70%;
+        max-width: 600px;
+    }
+    
+    .homepage-name {
+        font-size: 2.5em;
+    }
 }

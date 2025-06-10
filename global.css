@@ -88,6 +88,7 @@ p span {
   min-width: 100vw;
   padding: 1em;
 }
+
 .navbar {
   display: flex;
   justify-content: center;
@@ -98,7 +99,7 @@ p span {
   box-shadow: 0 0 1em hsl(0, 0%, 12%);
   padding: 0.1em;
   margin-left: auto;
-  transform: translateX(60px);
+  margin: 0 auto;
 }
 
 :root[data-theme="light"] .navbar {
@@ -268,4 +269,210 @@ body.preload .toggle-label:before {
 :root[data-theme="dark"] #moon {
   border-radius: 100em;
   opacity: 1;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2em;
+  height: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.hamburger span {
+  height: 0.2em;
+  width: 100%;
+  background-color: var(--heading-text-color);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.theme-toggle-container {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* Add these mobile-responsive styles to your existing global.css */
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    body {
+        max-width: 10px;
+        font-size: 1.2em;
+    }
+    
+    .header {
+        flex-direction: column;
+        padding: 0.5em;
+        gap: 1em;
+    }
+
+    .navbar-element {
+      font-size: 1em;
+      margin: 0.25em;
+    }
+    
+    .hamburger {
+      display: flex;
+      position: absolute;
+      top: 1em;
+      left: 1em;
+    }
+
+    .navbar {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--overlay-background);
+      padding: 1em;
+      border-radius: 1em;
+      box-shadow: 0 0 1em hsl(0, 0%, 12%);
+      position: absolute;
+      top: 4em;
+      left: 1em;
+      right: 1em;
+    }
+
+    .navbar.show {
+      display: flex;
+    }
+
+    .navbar p {
+      display: none;
+    }
+
+    .toggle-label {
+        margin-left: 0;
+        margin-right: 0;
+        height: 40px;
+        width: 80px;
+    }
+    
+    .toggle-label:before {
+        height: 32px;
+        width: 32px;
+    }
+    
+    :root[data-theme="light"] .toggle-label:before {
+        transform: translateX(-20px);
+    }
+    
+    :root[data-theme="dark"] .toggle-label:before {
+        transform: translateX(20px);
+    }
+    
+    .toggle-svg {
+        height: 20px;
+        width: 20px;
+    }
+    
+    #sun {
+        margin-right: 10px;
+    }
+    
+    #moon {
+        margin-left: 10px;
+    }
+    
+    :root[data-theme="light"] #moon {
+        transform: translateX(-40px);
+    }
+    
+    :root[data-theme="dark"] #sun {
+        transform: translateX(40px);
+    }
+    
+    .footer {
+        margin: 0.5em;
+        padding: 0.2em;
+        flex-wrap: wrap;
+    }
+    
+    .footer-element {
+        height: 10em;
+        width: 10em;
+        padding: 0em;
+    }
+    
+    .svg {
+        height: 10em;
+        width: 10em;
+    }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 1em;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 0.5em;
+        padding: 0.8em;
+    }
+    
+    .navbar-element {
+        margin: 0.1em 0;
+        width: 100%;
+        text-align: center;
+        font-size: 0.85em;
+    }
+    
+    .toggle-label {
+        height: 35px;
+        width: 70px;
+    }
+    
+    .toggle-label:before {
+        height: 28px;
+        width: 28px;
+    }
+    
+    :root[data-theme="light"] .toggle-label:before {
+        transform: translateX(-17px);
+    }
+    
+    :root[data-theme="dark"] .toggle-label:before {
+        transform: translateX(17px);
+    }
+    
+    .toggle-svg {
+        height: 18px;
+        width: 18px;
+    }
+    
+    #sun {
+        margin-right: 8px;
+    }
+    
+    #moon {
+        margin-left: 8px;
+    }
+    
+    :root[data-theme="light"] #moon {
+        transform: translateX(-35px);
+    }
+    
+    :root[data-theme="dark"] #sun {
+        transform: translateX(35px);
+    }
+    
+    .footer-element {
+        height: 5em;
+        width: 5em;
+    }
+    
+    .svg {
+        height: 3em;
+        width: 3em;
+    }
 }
