@@ -88,6 +88,7 @@ p span {
   justify-self: start;
   min-width: 100vw;
   padding: 1em;
+  z-index: 5;
 }
 
 .navbar {
@@ -294,8 +295,7 @@ body.preload .toggle-label:before {
 
 .theme-toggle-container {
   position: absolute;
-  top: 1em;
-  right: 1em;
+  right: 1em; /* Adjust distance from right edge */
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -320,11 +320,19 @@ body.preload .toggle-label:before {
         max-width: 10px;
         font-size: 1.2em;
     }
-    
+
+    .theme-toggle-container {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+    }
+  
     .header {
         flex-direction: column;
         padding: 0.5em;
         gap: 1em;
+        margin: 0.5em 0;
+        
     }
 
     .navbar-element {
@@ -341,10 +349,9 @@ body.preload .toggle-label:before {
 
     .navbar {
       display: none;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       background-color: var(--overlay-background);
-      padding: 1em;
       border-radius: 1em;
       box-shadow: 0 0 1em hsl(0, 0%, 12%);
       position: absolute;
@@ -364,8 +371,8 @@ body.preload .toggle-label:before {
     .toggle-label {
         margin-left: 0;
         margin-right: 0;
-        height: 40px;
-        width: 80px;
+        height: 2em;
+        width: 4em;
     }
     
     .toggle-label:before {
@@ -401,23 +408,6 @@ body.preload .toggle-label:before {
     :root[data-theme="dark"] #sun {
         transform: translateX(40px);
     }
-    
-    .footer {
-        margin: 0.5em;
-        padding: 0.2em;
-        flex-wrap: wrap;
-    }
-    
-    .footer-element {
-        height: 10em;
-        width: 10em;
-        padding: 0em;
-    }
-    
-    .svg {
-        height: 10em;
-        width: 10em;
-    }
 }
 
 /* Small Mobile Styles */
@@ -427,7 +417,6 @@ body.preload .toggle-label:before {
     }
     
     .navbar {
-        flex-direction: column;
         gap: 0.5em;
         padding: 0.8em;
     }
@@ -437,11 +426,6 @@ body.preload .toggle-label:before {
         width: 100%;
         text-align: center;
         font-size: 0.85em;
-    }
-    
-    .toggle-label {
-        height: 35px;
-        width: 70px;
     }
     
     .toggle-label:before {

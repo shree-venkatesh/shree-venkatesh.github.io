@@ -9,6 +9,9 @@ const nextBtn = document.getElementById('nextBtn');
 const left = document.getElementById('left');
 const right = document.getElementById('right');
 
+const leftMobile = document.getElementById('leftMobile');
+const rightMobile = document.getElementById('rightMobile');
+
 // project category selector buttons
 const tuasBtn = document.getElementById('tuas-button');
 const personalBtn = document.getElementById('personal-button');
@@ -35,7 +38,9 @@ function updateButtons() {
     // disable buttons if only one slide is present
     if (slides.length === 1) {
         left.classList.add("disable");
+        leftMobile.classList.add("disable");
         right.classList.add("disable");
+        rightMobile.classList.add("disable");
         return;
     }
 
@@ -43,16 +48,20 @@ function updateButtons() {
     prevBtn.disabled = currentSlide === 0;
     if (currentSlide === 0) {
         left.classList.add("disable");
+        leftMobile.classList.add("disable");
     } else {
         left.classList.remove("disable");
+        leftMobile.classList.remove("disable");
     }
     
     // disable right button, if on last slide
     nextBtn.disabled = currentSlide === slides.length - 1;
     if (currentSlide === slides.length - 1) {
         right.classList.add("disable");
+        rightMobile.classList.add("disable");
     } else {
         right.classList.remove("disable");
+        rightMobile.classList.remove("disable");
     }
 }
 
