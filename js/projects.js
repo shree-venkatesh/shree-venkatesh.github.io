@@ -74,7 +74,7 @@ function scrollToSlide(index) {
 
 function initialScrollToSlide(index) {
     const slide = document.getElementById(`${currentCategory}-${index}`);
-    slide.scrollIntoView();
+    slide.scrollIntoView({ behavior: "smooth", block: "nearest" });
     currentSlide = index;
     updateButtons();
 }
@@ -150,7 +150,7 @@ otherBtn.addEventListener('click', () => {
     academic.classList.remove('active');
     academicH2.classList.remove('selected');
     slides = document.querySelectorAll('.active .project-page-container');
-    currentCategory = "academic";
+    currentCategory = "other";
     currentSlide = 0;
     initialScrollToSlide(currentSlide)
     updateButtons();
