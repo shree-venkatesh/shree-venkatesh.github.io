@@ -3,8 +3,8 @@ button {
 }
 
 .projects-page {
-    min-height: 100vh;
-    min-width: 100vh;
+    min-height: 100svh;
+    min-width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
