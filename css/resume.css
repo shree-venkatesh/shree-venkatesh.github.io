@@ -24,6 +24,20 @@
     flex: 1;
 }
 
+.pdf-download-btn {
+    margin: 0.8em 0em;
+    font-size: 0.8em;
+    font-weight: bold;
+    background-color: var(--overlay-background);
+    border-radius: 1em;
+    color: var(--navbar-text-color);
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 :root[data-theme="light"] .resume {
     box-shadow: 0 0 0.5em hsl(0, 0%, 50%);
 }

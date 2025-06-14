@@ -306,7 +306,6 @@ body.preload .toggle-label:before {
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-top: 1em;
   font-size: 0.7em;
   opacity: 0.5;
   font-style: italic;
