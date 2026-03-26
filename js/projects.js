@@ -4,6 +4,8 @@ let slides = document.querySelectorAll('.active .project-page-container');
 // project page navigation buttons
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
+const prevBtnMobile = document.getElementById('prevBtnMobile');
+const nextBtnMobile = document.getElementById('nextBtnMobile');
 
 // nav button labels
 const left = document.getElementById('left');
@@ -72,24 +74,19 @@ function scrollToSlide(index) {
     updateButtons();
 }
 
-function initialScrollToSlide(index) {
-    const slide = document.getElementById(`${currentCategory}-${index}`);
-    slide.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    currentSlide = index;
-    updateButtons();
+
+function prevSlide() {
+    if (currentSlide > 0) scrollToSlide(currentSlide - 1);
 }
 
-prevBtn.addEventListener('click', () => {
-    if (currentSlide > 0) {
-        scrollToSlide(currentSlide - 1);
-    }
-});
+function nextSlide() {
+    if (currentSlide < slides.length - 1) scrollToSlide(currentSlide + 1);
+}
 
-nextBtn.addEventListener('click', () => {
-    if (currentSlide < slides.length - 1) {
-        scrollToSlide(currentSlide + 1);
-    }
-});
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
+prevBtnMobile.addEventListener('click', prevSlide);
+nextBtnMobile.addEventListener('click', nextSlide);
 
 // set the selected category as active, and the others to inactive
 tuasBtn.addEventListener('click', () => {
@@ -104,7 +101,7 @@ tuasBtn.addEventListener('click', () => {
     slides = document.querySelectorAll('.active .project-page-container');
     currentCategory = "tuas";
     currentSlide = 0;
-    initialScrollToSlide(currentSlide)
+    scrollToSlide(currentSlide)
     updateButtons();
 });
 
@@ -120,7 +117,7 @@ personalBtn.addEventListener('click', () => {
     slides = document.querySelectorAll('.active .project-page-container');
     currentCategory = "personal";
     currentSlide = 0;
-    initialScrollToSlide(currentSlide)
+    scrollToSlide(currentSlide)
     updateButtons();
 });
 
@@ -136,7 +133,7 @@ academicBtn.addEventListener('click', () => {
     slides = document.querySelectorAll('.active .project-page-container');
     currentCategory = "academic";
     currentSlide = 0;
-    initialScrollToSlide(currentSlide)
+    scrollToSlide(currentSlide)
     updateButtons();
 });
 
@@ -152,7 +149,7 @@ otherBtn.addEventListener('click', () => {
     slides = document.querySelectorAll('.active .project-page-container');
     currentCategory = "other";
     currentSlide = 0;
-    initialScrollToSlide(currentSlide)
+    scrollToSlide(currentSlide)
     updateButtons();
 });
 // Initial button state
