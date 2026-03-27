@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    {% if page.page_css %}
+    <link rel="stylesheet" type="text/css" href="/css/{{ page.page_css }}.css">
+    {% endif %}
+    <link rel="stylesheet" type="text/css" href="/global.css">
+</head>
+<body>
+    <div class="{{ page.page_class }}">
+        {% include navbar.html %}
+        {{ content }}
+        <p class="update"></p>
+        {% include footer.html %}
+    </div>
+    <script src="/global.js"></script>
+    {% if page.page_js %}
+    <script src="/js/{{ page.page_js }}.js"></script>
+    {% endif %}
+</body>
+</html>

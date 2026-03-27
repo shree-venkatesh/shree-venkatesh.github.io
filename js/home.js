@@ -1,6 +1,6 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function() {
-    const texts = ["Computer Science @ UC San Diego", "Software Engineer", "Student", "Embedded Systems Engineer", "Full-Stack Engineer"];
+    const texts = ["MS Computer Science @ UC San Diego", "Instructional Assistant @ UC San Diego", "Embedded Systems Engineer", "Full-Stack Engineer"];
     let count = 0;
     let index = 0;
     let currentText = '';

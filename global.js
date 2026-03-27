@@ -27,6 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.getElementById('hamburger-toggle').addEventListener('click', () => {
+document.getElementById('hamburger-toggle').addEventListener('click', (e) => {
+  e.stopPropagation();
   document.querySelector('.navbar').classList.toggle('show');
+});
+
+document.addEventListener('click', (e) => {
+  const navbar = document.querySelector('.navbar');
+  if (navbar.classList.contains('show') && !navbar.contains(e.target)) {
+    navbar.classList.remove('show');
+  }
 });

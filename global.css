@@ -19,7 +19,7 @@ dd {
 }
 
 body {
-  font: 1.5em 'Roboto', sans-serif;
+  font: 1.2em 'JetBrains Mono', monospace;
   color: var(--heading-text-color);
 }
 
@@ -99,8 +99,7 @@ p span {
   background-color: var(--overlay-background);
   border-radius: 1em;
   box-shadow: 0 0 1em hsl(0, 0%, 12%);
-  padding: 0.1em;
-  margin-left: auto;
+  padding: 0.3em;
   margin: 0 auto;
 }
 
@@ -109,14 +108,13 @@ p span {
 }
 
 .navbar-element {
-  margin: 0 1em;
-  margin-top: 0%;
+  margin: 0 0.5em;
   font-size: 1em;
   font-weight: bold;
   color: var(--navbar-text-color);
   text-decoration: none;
   padding: 0.5em 1em;
-  border-radius: 1em;
+  border-radius: 0.7em;
 }
 
 .navbar-element:hover,
@@ -140,7 +138,7 @@ p span {
   justify-content: center;
   align-items: center;
   justify-self: start;
-  margin: 1em;
+  margin: 0 1em 1em;
   background-color: var(--overlay-background);
   border-radius: 0.5em;
   box-shadow: 0 0 1em hsl(0, 0%, 12%);
@@ -303,6 +301,14 @@ body.preload .toggle-label:before {
   gap: 0.5em;
 }
 
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
 .update {
   color: var(--subtext-color);
   display: flex;
@@ -311,6 +317,7 @@ body.preload .toggle-label:before {
   font-size: 0.7em;
   opacity: 0.5;
   font-style: italic;
+  margin: 0.75em;
 }
 
 /* Add these mobile-responsive styles to your existing global.css */
@@ -332,12 +339,14 @@ body.preload .toggle-label:before {
         padding: 0.5em;
         gap: 1em;
         margin: 0.5em 0;
-        
+        min-height: 4em;
     }
 
     .navbar-element {
       font-size: 1em;
       margin: 0.25em;
+      width: 100%;
+      text-align: center;
     }
     
     .hamburger {
@@ -349,7 +358,7 @@ body.preload .toggle-label:before {
 
     .navbar {
       display: none;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
       background-color: var(--overlay-background);
       border-radius: 1em;

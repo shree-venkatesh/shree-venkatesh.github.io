@@ -1,64 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shree Venkatesh</title>
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <link rel="stylesheet" type="text/css" href="css/home.css">
-    <link rel="stylesheet" type="text/css" href="global.css">
-</head>
-<body>
-    <div class="homepage">
-        <div class="header">
-            <button class="hamburger" id="hamburger-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="navbar">
-                <a href="./index.html" class="navbar-element active-page" id="home">Home</a>
-                <p style="font-size: 1.5em; font-weight: lighter;">|</p>
-                <a href="./about.html" class="navbar-element" id="about">About</a>
-                <p style="font-size: 1.5em; font-weight: lighter;">|</p>
-                <a href="./projects.html" class="navbar-element" id="projects">Projects</a>
-                <p style="font-size: 1.5em; font-weight: lighter;">|</p>
-                <a href="./resume.html" class="navbar-element" id="resume">Resume</a>
-            </div>
-            <div class="theme-toggle-container">
-                <button id="theme-toggle"></button>
-                <label for="theme-toggle" class="toggle-label">
-                    <img src="assets/sun.svg" id="sun" class="toggle-svg">
-                    <img src="assets/moon.svg" id="moon" class="toggle-svg">
-                </label>
-            </div>
-        </div>
-        <div class="body">
-            <div class="homepage-name-subtext-container">
-                <h1 class="homepage-name">Shree Venkatesh</h1>
-                <div class="homepage-name-subtext">
-                    <p id="typing"></p>
-                    <p class="cursor">|</p>
-                </div>
-            </div>
-        </div>
-        <p class="update"></p>
-        <div class="footer">
-            <a href="https://www.linkedin.com/in/shree-venkatesh/" target="_blank" rel="noopener noreferrer" class="footer-element">
-                <img src="assets/linkedin.svg" class="svg" id="linkedin">
-            </a>
-            
-            <p style="font-size: 1.5em; font-weight: lighter;">|</p>
-            <a href="https://www.github.com/shree-venkatesh" target="_blank" rel="noopener noreferrer" class="footer-element">
-                <img src="assets/github.svg" class="svg" id="github">
-            </a>
-            
-            <p style="font-size: 1.5em; font-weight: lighter;">|</p>
-            <a href="mailto:vshree852@gmail.com" target="_blank" rel="noopener noreferrer" class="footer-element">
-                <img src="assets/email.svg" class="svg" id="email">
-            </a>
+---
+layout: base
+title: Shree Venkatesh
+page_id: home
+page_css: home
+page_js: home
+page_class: homepage
+---
+<div class="body">
+    <div class="homepage-name-subtext-container">
+        <h1 class="homepage-name">Shree Venkatesh</h1>
+        <div class="homepage-name-subtext">
+            <p id="typing"></p>
+            <p class="cursor">|</p>
         </div>
     </div>
-</body>
-<script src="global.js"></script>
-<script src="js/home.js"></script>
-</html>
+</div>

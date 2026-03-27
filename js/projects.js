@@ -1,4 +1,3 @@
-const container = document.querySelector('.project-page-metacontainer');
 let slides = document.querySelectorAll('.active .project-page-container');
 
 // project page navigation buttons

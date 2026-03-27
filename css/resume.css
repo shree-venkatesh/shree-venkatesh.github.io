@@ -10,14 +10,6 @@
     overflow: hidden;
 }
 
-.body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-}
-
 .resume {
     box-shadow: 0 0 1em hsl(0, 0%, 12%);
     border-radius: 1em;
@@ -31,7 +23,7 @@
     font-size: 0.8em;
     font-weight: 600;
     background-color: var(--overlay-background);
-    border-radius: 1em;
+    border-radius: 0.7em;
     color: var(--navbar-text-color);
     text-decoration: none;
     padding: 0.5em 1em;
@@ -52,16 +44,22 @@
 
     .resume {
         width: 90vw;
-        border-radius: 0.75em;
+        border-radius: 1em;
         margin: 1em 0.5em;
         min-height: 72vh;
+    }
+
+    .pdf-download-btn {
+        font-size: 1em;
+        padding: 0.75em 2em;
+        margin: 0.5em 0 1em;
     }
 }
 
 @media screen and (max-width: 480px) {
     .resume {
         width: 95vw;
-        border-radius: 0.5em;
+        border-radius: 1em;
         box-shadow: 0 0 0.75em hsl(0, 0%, 20%);
     }
 }

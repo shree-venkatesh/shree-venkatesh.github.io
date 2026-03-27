@@ -1,70 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Shree Venkatesh</title>
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <link rel="stylesheet" type="text/css" href="css/about.css">
-    <link rel="stylesheet" type="text/css" href="global.css">
-</head>
-<body>
-    <div class="about-page">
-        <div class="header">
-            <button class="hamburger" id="hamburger-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="navbar">
-                <a href="./index.html" class="navbar-element" id="home">Home</a>
-                <p style="font-size: 1.5em; font-weight: lighter;">|</p>
-                <a href="./about.html" class="navbar-element active-page" id="about">About</a>
-                <p style="font-size: 1.5em; font-weight: lighter;">|</p>
-                <a href="./projects.html" class="navbar-element" id="projects">Projects</a>
-                <p style="font-size: 1.5em; font-weight: lighter;">|</p>
-                <a href="./resume.html" class="navbar-element" id="resume">Resume</a>
-            </div>
-            <div class="theme-toggle-container">
-                <button id="theme-toggle"></button>
-                <label for="theme-toggle" class="toggle-label">
-                    <img src="assets/sun.svg" id="sun" class="toggle-svg">
-                    <img src="assets/moon.svg" id="moon" class="toggle-svg">
-                </label>
-            </div>
-        </div>
-        <div class="body">
-            <div class="about-page-container">
-                <h2 class="about-title">About Me</h2>
-                <p class="about-text">
-                    Hi, I'm <span class="highlight">Shree Venkatesh</span>, a fourth year <span class="highlight">Computer Science</span> undergraduate student at <span class="highlight">UC San Diego</span>. 
-                    My interests lie in <span class="highlight">Embedded Systems Engineering</span> and <span class="highlight">Machine/Deep Learning</span>.
-                </p>
-                <p class="about-text">
-                    I am one of two <span class="highlight">Embedded System Engineering Leads</span> at <a class="highlight" id="TUAS" href="https://tuas.ucsd.edu" target="_blank" rel="noopener noreferrer">Triton Unmanned Aerial Systems</a>. 
-                </p>
-                <p class="about-text">
-                    I was the <span class="highlight">Co-President</span> of <a class="highlight" id="TESC" href="https://tesc.ucsd.edu" target="_blank" rel="noopener noreferrer">Triton Engineering Student Council</a>, and the <span class="highlight">Engineering Manager</span>
-                    of TritonSpend at <a class="highlight" id="CSES" href="https://csesucsd.com" target="_blank" rel="noopener noreferrer">CSES Open Source</a> at UCSD, for the academic year 2024-25.
-                </p>
-            </div>
-        </div>
-        <p class="update"></p>
-        <div class="footer">
-            <a href="https://www.linkedin.com/in/shree-venkatesh/" target="_blank" rel="noopener noreferrer" class="footer-element">
-                <img src="assets/linkedin.svg" class="svg" id="linkedin">
-            </a>
-            
-            <p style="font-size: 1.5em; font-weight: lighter;">|</p>
-            <a href="https://www.github.com/shree-venkatesh" target="_blank" rel="noopener noreferrer" class="footer-element">
-                <img src="assets/github.svg" class="svg" id="github">
-            </a>
-            
-            <p style="font-size: 1.5em; font-weight: lighter;">|</p>
-            <a href="mailto:vshree852@gmail.com" target="_blank" rel="noopener noreferrer" class="footer-element">
-                <img src="assets/email.svg" class="svg" id="email">
-            </a>
-        </div>
+---
+layout: base
+title: About | Shree Venkatesh
+page_id: about
+page_css: about
+page_class: about-page
+---
+<div class="body">
+    <div class="about-page-container">
+        <h2 class="about-title">About Me</h2>
+        <p class="about-text">
+            I'm a <span class="highlight">MS Computer Science</span> student at <span class="highlight">UC San Diego</span>, with interests in <span class="highlight">Embedded Systems</span> and <span class="highlight">Machine/Deep Learning</span>.
+        </p>
+        <p class="about-text">
+            I am an <span class="highlight">Embedded Systems Engineering Lead</span> at <a class="highlight" id="TUAS" href="https://tritonuas.com" target="_blank" rel="noopener noreferrer">Triton Unmanned Aerial Systems</a>, and interned at <span class="highlight">Amazon Web Services</span> as a <span class="highlight">Software Development Engineer</span> in Summer 2025.
+        </p>
+        <p class="about-text">
+            I was an <span class="highlight">Instructional Assistant</span> for <span class="highlight">Microprocessor System Design</span> (Prof. John Eldon, Fall 2025), and am currently one for <span class="highlight">Deep Reinforcement Learning</span> (Prof. Prithviraj Ammanabrolu, Spring 2026).
+        </p>
+        <p class="about-text">
+            I was a <span class="highlight">Co-President</span> of <a class="highlight" id="TESC" href="https://tescatucsd.org/" target="_blank" rel="noopener noreferrer">Triton Engineering Student Council</a>, and <span class="highlight">Engineering Manager</span> at <a class="highlight" id="CSES" href="https://csesucsd.com" target="_blank" rel="noopener noreferrer">CSES Open Source</a>, leading TritonSpend (2024–25).
+        </p>
     </div>
-</body>
-<script src="global.js"></script>
-</html>
+</div>
