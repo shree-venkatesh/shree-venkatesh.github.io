@@ -10,20 +10,16 @@
 }
 
 .body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
     user-select: text;
 }
 
 .about-page-container {
     background-color: var(--overlay-background);
-    border-radius: 2em;
+    border-radius: 1em;
     padding: 20px;
     box-shadow: 0 0 2em hsl(0, 0%, 10%);
-    width: 50%;
+    width: 70vw;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,9 +67,9 @@
     }
     
     .about-page-container {
-        
+        width: 85vw;
         padding: 15px;
-        border-radius: 1.5em;
+        border-radius: 1em;
         margin: 10px 0;
     }
     

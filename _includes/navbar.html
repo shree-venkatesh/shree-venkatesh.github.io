@@ -1,0 +1,23 @@
+<div class="header">
+    <button class="hamburger" id="hamburger-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="navbar">
+        <a href="/" class="navbar-element {% if page.page_id == 'home' %}active-page{% endif %}" id="home">Home</a>
+        <p style="font-size: 1.5em; font-weight: lighter;">|</p>
+        <a href="/about.html" class="navbar-element {% if page.page_id == 'about' %}active-page{% endif %}" id="about">About</a>
+        <p style="font-size: 1.5em; font-weight: lighter;">|</p>
+        <a href="/projects.html" class="navbar-element {% if page.page_id == 'projects' %}active-page{% endif %}" id="projects">Projects</a>
+        <p style="font-size: 1.5em; font-weight: lighter;">|</p>
+        <a href="/resume.html" class="navbar-element {% if page.page_id == 'resume' %}active-page{% endif %}" id="resume">Resume</a>
+    </div>
+    <div class="theme-toggle-container">
+        <button id="theme-toggle"></button>
+        <label for="theme-toggle" class="toggle-label">
+            <img src="/assets/sun.svg" id="sun" class="toggle-svg">
+            <img src="/assets/moon.svg" id="moon" class="toggle-svg">
+        </label>
+    </div>
+</div>

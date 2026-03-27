@@ -1,7 +1,3 @@
-button {
-    display: none;
-}
-
 .projects-page {
     min-height: 100svh;
     min-width: 100vw;
@@ -15,11 +11,6 @@ button {
 }
 
 .body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
     user-select: text;
 }
 
@@ -65,7 +56,7 @@ button {
 .slider-wrapper {
     display: flex;
     flex-direction: row;
-    width: 65%;
+    width: 80vw;
     flex: 1;
     align-items: center;
     justify-content: center;
@@ -94,7 +85,7 @@ button {
 
 .project-page-container {
     background-color: var(--overlay-background);
-    border-radius: 30px;
+    border-radius: 1em;
     padding: 20px;
     margin: 0 1.5em;
     flex: 1 0 100%;
@@ -115,9 +106,9 @@ button {
 
 .arrow {
     user-select: none;
-    width: 75px;
-    height: 75px;
-    border-radius: 100em;
+    width: clamp(35px, 5vw, 75px);
+    height: clamp(35px, 5vw, 75px);
+    border-radius: 1em;
     background-color: var(--overlay-background);
     box-shadow: 0 0 1.5em hsl(0, 0%, 10%);
     display: flex;
@@ -172,11 +163,7 @@ button {
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
-    .body {
-        translate: 0em 0.8em;
-    }
     .active {
-        min-height: auto !important;
         max-width: 90vw;
     }
     .projects-page {
@@ -187,10 +174,11 @@ button {
     
     .project-category-switcher {
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
         gap: 0.5em;
         margin: 1em 0;
+        width: 95%;
     }
 
     .mobileBtns {
@@ -202,7 +190,7 @@ button {
     }
 
     .project-category {
-        min-width: 20vw;
+        min-width: 18vw;
         width: auto;
         font-size: 1em;
         padding: 0.2em 0.4em;
@@ -220,7 +208,7 @@ button {
     .project-page-metacontainer {
         padding: 1em;
     }
-    
+
     .active {
         min-height: 60vh;
     }
@@ -228,7 +216,7 @@ button {
     .project-page-container {
         margin: 0 1.5em;
         padding: 15px;
-        border-radius: 20px;
+        border-radius: 1em;
         min-height: auto;
     }
     
@@ -279,7 +267,7 @@ button {
     
     .project-page-container {
         padding: 12px;
-        border-radius: 15px;
+        border-radius: 1em;
     }
     
     .arrow {
@@ -314,7 +302,7 @@ button {
     
     .project-page-container {
         padding: 10px;
-        border-radius: 12px;
+        border-radius: 1em;
     }
     
     .arrow {
